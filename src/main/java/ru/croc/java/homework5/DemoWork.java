@@ -13,9 +13,9 @@ public class DemoWork {
             System.out.println("4. View tasks");
             System.out.println("5. Exit");
 
-            int choice = Integer.parseInt(input.nextLine());
+            String choice = input.nextLine();
             switch (choice){
-                case 1:{
+                case "1":{
                     System.out.print("Enter code: ");
                     String code = input.nextLine();
 
@@ -40,7 +40,7 @@ public class DemoWork {
                     }
                     break;
                 }
-                case 2:{
+                case "2":{
                     System.out.print("Enter code of task to edit: ");
                     String code = input.nextLine();
                     if (!taskManager.containsTask(code)){
@@ -73,7 +73,7 @@ public class DemoWork {
                     }
                     break;
                 }
-                case 3:{
+                case "3":{
                     System.out.print("Enter code of task to delete: ");
                     String code = input.nextLine();
 
@@ -85,12 +85,12 @@ public class DemoWork {
                     }
                     break;
                 }
-                case 4:{
+                case "4":{
                     System.out.println("All tasks");
                     System.out.println(taskManager.allTasks());
                     break;
                 }
-                case 5:{
+                case "5":{
                     return;
                 }
                 default:{
